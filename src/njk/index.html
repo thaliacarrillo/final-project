@@ -1,0 +1,35 @@
+{% extends '_layouts/base.njk' %}
+
+{% block page_title %}New index page title{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+    <h1>Queen</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+    <p>
+     Queen are a British rock band that formed in London in 1970. Their classic line-up was Freddie Mercury (lead vocals and piano), Brian May (lead guitar and vocals), Roger Taylor (drums and vocals), and John Deacon (bass guitar). Their earliest works were influenced by progressive rock, hard rock and heavy metal, but the band gradually ventured into more conventional and radio-friendly works by incorporating further styles, such as arena rock and pop rock, into their music.
+    </p>
+      <ul> 
+        {% for member in members %}
+        <div class="col-md-3">
+        <div class="card" style="width:280px">
+  <img class="card-img-top" src=assets/img/members/{{ member.imagebw }} alt="Member bw image">
+  <div class="card-body">
+    <h4 class="card-title">{{ member.name }}</h4>
+    <p class="card-text">{{ member.instruments }}</p>
+    <a href="{{ member.link }}" class="btn btn-dark">Profile</a>
+        </div>
+        {% else %}
+          <li>This would display if the 'books' collection were empty</li>
+        {% endfor %}
+     </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
