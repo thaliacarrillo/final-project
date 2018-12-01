@@ -1,0 +1,14 @@
+{% extends '_layouts/base.njk' %}
+{% block page_title %}Queen | Freddie Mercury {% endblock %}
+
+{% set members = members [0] %}
+
+
+  
+{% block info %}
+      info
+{% endblock %}
+
+{% block story %}
+      <p>{{ members.text | safe}}</p>
+{% endblock %}

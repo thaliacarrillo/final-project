@@ -1,0 +1,16 @@
+{% extends '_layouts/base.njk' %}
+{% block page_title %}Queen | John Deacon {% endblock %}
+
+{%set member = members [3] %}
+<article class="container">
+  <div class="row">
+    <div class="col-sm-4 left-rail">
+      {% block info %}{% endblock %}
+    </div>
+    <div class="col-sm-8">
+      {% block story %}{% endblock %}
+
+    </div>
+  </div>
+</article>
+{% endblock %}
