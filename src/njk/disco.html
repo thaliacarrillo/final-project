@@ -1,23 +1,29 @@
-<ul class="list-unstyled">
-  <li class="media">
-    <img class="mr-3" src=".../64x64" alt="Generic placeholder image">
-    <div class="media-body">
-      <h5 class="mt-0 mb-1">List-based media object</h5>
-      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    </div>
-  </li>
-  <li class="media my-4">
-    <img class="mr-3" src=".../64x64" alt="Generic placeholder image">
-    <div class="media-body">
-      <h5 class="mt-0 mb-1">List-based media object</h5>
-      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    </div>
-  </li>
-  <li class="media">
-    <img class="mr-3" src=".../64x64" alt="Generic placeholder image">
-    <div class="media-body">
-      <h5 class="mt-0 mb-1">List-based media object</h5>
-      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    </div>
-  </li>
-</ul>
+{% extends '_layouts/base.njk' %}
+
+
+{% block content %}
+<article class="container">
+  <div class="row">
+  <h1>Discography</h1>
+  </div>
+
+<div class="row">
+    {%for disc in discography%}
+  <div class="col-md-4">
+      <ul class="list-unstyled">
+        <li class="albums">
+    <img class="album-image img-thumbnail" src=assets/img/discs/{{disc.image}} alt="Album Cover">
+    <div class="media-body">
+      <h3 class="album-title">{{disc.title}}</h3>
+      <h5 class="album-year">{{disc.year}}</h5>
+    </div>
+  </li>
+  </ul>
+</div>
+{%endfor%}
+</article>
+{% endblock %}
+ 
+
+
+ 

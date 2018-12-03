@@ -1,16 +1,14 @@
-{% extends '_layouts/base.njk' %}
-{% block page_title %}Queen | Roger Taylor  {% endblock %}
+{% extends '_layouts/detail.njk' %}
 
-{%set member = members [2] %}
-<article class="container">
-  <div class="row">
-    <div class="col-sm-4 left-rail">
-      {% block info %}{% endblock %}
-    </div>
-    <div class="col-sm-8">
-      {% block story %}{% endblock %}
+{% block page_title %}Queen | Roger Taylor {% endblock %}
 
-    </div>
-  </div>
-</article>
+{% set members = members [2] %}
+  
+{% block info %}
+ <h1>Roger Taylor</h1>
+ <img src="assets/img/members/roger-taylor-color.jpg" class="responsive">
+{% endblock %}
+
+{% block story %}
+      <p>{{ members.text | safe }}</p>
 {% endblock %}

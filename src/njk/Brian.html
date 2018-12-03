@@ -1,16 +1,16 @@
-{% extends '_layouts/base.njk' %}
+{% extends '_layouts/detail.njk' %}
+
 {% block page_title %}Queen | Brian May {% endblock %}
 
-{%set member = members [1] %}
-<article class="container">
-  <div class="row">
-    <div class="col-sm-4 left-rail">
-      {% block info %}{% endblock %}
-    </div>
-    <div class="col-sm-8">
-      {% block story %}{% endblock %}
+{% set members = members [1] %}
 
-    </div>
-  </div>
-</article>
+
+  
+{% block info %}
+<h1>Brian May</h1>
+<img src="assets/img/members/brian-may-color.jpg" class="responsive">
+{% endblock %}
+
+{% block story %}
+      <p>{{ members.text | safe }}</p>
 {% endblock %}

@@ -1,4 +1,5 @@
-{% extends '_layouts/base.njk' %}
+{% extends '_layouts/detail.njk' %}
+
 {% block page_title %}Queen | Freddie Mercury {% endblock %}
 
 {% set members = members [0] %}
@@ -6,9 +7,10 @@
 
   
 {% block info %}
-      info
+<h1>Freddie Mercury</h1>
+<img src="assets/img/members/freddie-mercury-color.jpg" class="responsive">
 {% endblock %}
 
 {% block story %}
-      <p>{{ members.text | safe}}</p>
+      <p>{{ members.text | safe }}</p>
 {% endblock %}

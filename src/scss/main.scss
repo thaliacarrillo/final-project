@@ -21,3 +21,18 @@
 // Import partials
 @import "nav";
 
+.jumbotron {
+    margin-bottom: 0px;
+    height: 400px;
+    background-image: url(../assets/img/queen-band-wallpaper-thin.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
