@@ -5,10 +5,10 @@
 {% set members = members [2] %}
   
 {% block info %}
- <h1>Roger Taylor</h1>
+ <h2>Roger Taylor</h2>
  <img src="assets/img/members/roger-taylor-color.jpg" class="responsive">
 {% endblock %}
 
 {% block story %}
-      <p>{{ members.text | safe }}</p>
+      <p class="bio">{{ members.text | safe }}</p>
 {% endblock %}
