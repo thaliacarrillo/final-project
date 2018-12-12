@@ -40,7 +40,8 @@
 h1 { 
     font-family: 'Fugaz One', cursive;
     color: brown;
-    font-size: 200px;
+    font-size: 150px;
+    line-height: 4.25em;
    
 }
 
@@ -53,7 +54,7 @@ h2 {
 
 body { 
     font-family: 'Open Sans Condensed', sans-serif; 
-    background-color: black 
+    background-color: grey; 
 }
 
 .about {    color: whitesmoke;
@@ -61,3 +62,9 @@ body {
 
 p .bio {    color: white;
 }
+
+
+#rotate-text {
+    width: 25px;
+    transform: rotate(-90deg);
+ }
